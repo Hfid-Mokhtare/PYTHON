@@ -4,5 +4,5 @@
 
 |levels| level name|
 |------|----------|
-|1|phython commen syntax|
-|-----------|-------------|
+| 1 |phython commen syntax|
+|||
