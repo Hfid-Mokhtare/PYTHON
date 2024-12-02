@@ -40,4 +40,56 @@ print(type(unique_numbers)) # Output: <class 'set'>
 print(type(person)) # Output: <class 'dict'>
 
 
+#============================================================================
+#Q1: 
+FullName = "Mohammed Ali Zeggaf"
+Age = 18
+City = "tangier"
+Country = "Morocco"
+MonthlySalary = 5000
+YearlySalary = MonthlySalary * 12
+Gender = 'M'
+isMarried = False
+
+print("************************************")
+print("Name : ",  FullName ,"\n")
+print("Age : " , Age ," Years. \n")
+print("City : ",City," \n")
+print("Monthly Salary : : " , MonthlySalary , " \n")
+print("Yearly Salary : " , YearlySalary , " \n")
+print("Gender :" , Gender , " \n")
+print("Married  : " , isMarried  , " \n")
+print("************************************")
+
+#============================================================================
+#Q2 : 
+Num1=20
+Num2=30
+Num3=10
+Total=Num1+Num2+Num3
+
+print(Num1,"+")
+print(Num2,"+")
+print(Num3,"")
+print("----------------")
+print("Tota =", Total,"\n")
+
+#============================================================================
+#Q3 : 
+Age=25
+add_to_age=5
+
+print("after",add_to_age,"years you will be",Age+add_to_age,"years old\n")
+
+
+
+
+
+
+
+
+
+
+
+
 
