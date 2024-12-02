@@ -13,6 +13,8 @@ pi = 3.14159
 #str
 name = "Alice"
 
+#in python there is no variable from type char
+
 # Assigning a boolean value
 #bool
 is_true = True
