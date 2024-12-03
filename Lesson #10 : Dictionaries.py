@@ -11,65 +11,79 @@ print(person["age"])   # Output: 30
 
 # Define classes to represent the information structures
 
-class ContactInfo:
-  def __init__(self, facebook_account, twitter_account, email, phone):
-    self.facebook_account = facebook_account
-    self.twitter_account = twitter_account
-    self.email = email
-    self.phone = phone
+class ConracteInfo: 
+    def __init__(self,facebook_acounte,tweeter_acounte,amail,phone):
+        self.facebook_acounte=facebook_acounte
+        self.tweeter_acounte=tweeter_acounte
+        self.email=amail
+        self.phone=phone
 
-class PersonalInfo:
-  def __init__(self, full_name, age, gender, married, month_salary):
-    self.full_name = full_name
-    self.age = age
-    self.gender = gender
-    self.married = married
-    self.month_salary = month_salary
+class PersonalInfo: 
+    def __init__(self,FullName,age,Gender,Married,MonthSalary):
+        self.FullName=FullName
+        self.age=age
+        self.Gender=Gender 
+        self.Married=Married
+        self.MonthSalary=MonthSalary  
+        # self.YearSalary:int=int(MonthSalary * 12)
 
-class Address:
-  def __init__(self, country, city, street):
-    self.country = country
-    self.city = city
-    self.street = street
+class Adress: 
+    def __init__(self,Country,City,Street):
+        self.Country=Country
+        self.City=City
+        self.Street=Street
 
-class MyCartInfo:
-  def __init__(self):
-    self.address = Address(None, None, None)  # Initialize with None values
-    self.contact_info = ContactInfo(None, None, None, None)
-    self.personal_info = PersonalInfo(None, None, None, None, None)
+class MyCartInfo: 
+    def __init__(self):
+        self.Adress=Adress(None,None,None)
+        self.ContacteInfo=ConracteInfo(None,None,None,None)
+        self.PersonalInfo=PersonalInfo(None,None,None,None,None)
 
 def main():
-  my_cart_info = MyCartInfo()
+    My_Cart_Info=MyCartInfo()
 
-  print("(((())))(((((())))))((())(()))))(())))()))))(((((())))\n")
-  my_cart_info.personal_info.full_name = input("Enter your FullName: ")
-  my_cart_info.personal_info.age = int(input("Enter your age: "))
-  my_cart_info.personal_info.gender = input("Enter your Gender (M/F): ")[0].upper()  # Get first char as uppercase
-  my_cart_info.personal_info.married = bool(int(input("Enter your Married (1/0): ")))  # Convert to bool
-  my_cart_info.personal_info.month_salary = int(input("Enter your MonthSalary: "))
+    print("--------------------Read Information--------------------\n")
 
-  my_cart_info.address.country = input("Enter your Country: ")
-  my_cart_info.address.city = input("Enter your City: ")
-  my_cart_info.address.street = input("Enter your street: ")
+    #Read Personal Informations
 
-  my_cart_info.contact_info.facebook_account = input("Enter your Facebook_account: ")
-  my_cart_info.contact_info.twitter_account = input("Enter your tweeter_account: ")
-  my_cart_info.contact_info.email = input("Enter your email: ")
-  my_cart_info.contact_info.phone = input("Enter your phone: ")
-  print("(((())))(((((())))))((())(()))))(())))()))))(((((())))\n")
+    My_Cart_Info.PersonalInfo.FullName=input("Enter your Full Name : ")
+    My_Cart_Info.PersonalInfo.age=int(input("Enter your Age : "))
+    My_Cart_Info.PersonalInfo.Gender=input("Enter Your Gender (M/F)")
+    My_Cart_Info.PersonalInfo.Married=bool(int(input("Are you Married (1/0)")))
+    My_Cart_Info.PersonalInfo.MonthSalary=int(input("Enter Your Month Salary : "))
 
-  print(" FullName:", my_cart_info.personal_info.full_name)
-  print(" age:", my_cart_info.personal_info.age)
-  print(" Gender (M/F):", my_cart_info.personal_info.gender)
-  print(" Married (1/0):", my_cart_info.personal_info.married)
-  print(" MonthSalary:", my_cart_info.personal_info.month_salary)
-  print(" Country:", my_cart_info.address.country)
-  print(" City:", my_cart_info.address.city)
-  print(" street:", my_cart_info.address.street)
-  print(" Facebook_account:", my_cart_info.contact_info.facebook_account)
-  print(" tweeter_account:", my_cart_info.contact_info.twitter_account)
-  print(" email:", my_cart_info.contact_info.email)
-  print(" phone:", my_cart_info.contact_info.phone)
+    #Read Adress Informations
 
-if __name__ == "__main__":
-  main()
+    My_Cart_Info.Adress.Country=input("Enter your Country : ")
+    My_Cart_Info.Adress.City=input("Enter your City : ")
+    My_Cart_Info.Adress.Street=input("Enter Your Street Name : ")
+  
+    #Read ContacteInfo Informations
+
+    My_Cart_Info.ContacteInfo.facebook_acounte=input("Enter your Facebook Acounte : ")
+    My_Cart_Info.ContacteInfo.tweeter_acounte=input("Enter your Tweeter Acounte : ")
+    My_Cart_Info.ContacteInfo.email=input("Enter Your Email : ")
+    My_Cart_Info.ContacteInfo.phone=input("Enter Your Phone Number : ")
+   
+    print("--------------------Print Carte Information--------------------\n")
+
+    print ("+----------------------------------------------------+")
+    print ("\t\tYour Carte Information")
+    print ("+----------------------------------------------------+")
+
+    print("\tFullName:", My_Cart_Info.PersonalInfo.FullName)
+    print("\tage:", My_Cart_Info.PersonalInfo.age)
+    print("\tGender (M/F):", My_Cart_Info.PersonalInfo.Gender)
+    print("\tMarried (1/0):", My_Cart_Info.PersonalInfo.Married)
+    print("\tMonthSalary:", My_Cart_Info.PersonalInfo.MonthSalary)
+    print("\tCountry:", My_Cart_Info.Adress.Country)
+    print("\tCity:", My_Cart_Info.Adress.City)
+    print("\tstreet:", My_Cart_Info.Adress.Street)
+    print("\tFacebook_account:", My_Cart_Info.ContacteInfo.facebook_acounte)
+    print("\ttweeter_account:", My_Cart_Info.ContacteInfo.tweeter_acounte)
+    print("\temail:", My_Cart_Info.ContacteInfo.email)
+    print("\tphone:", My_Cart_Info.ContacteInfo.phone)
+
+main()
+
+
