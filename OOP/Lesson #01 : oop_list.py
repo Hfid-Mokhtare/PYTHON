@@ -40,9 +40,9 @@ class etudiant(institution) :
         print("supprimer avec success !!")
        
     def update(self) :
-        self.etudiants[etudiant.index(self.nom)] = input("entrer le nouveeau nom : ")
-        self.etudiants[etudiant.index(self.prenom)] = input("entrer le nouveau prenom : ")
-        self.etudiants[etudiant.index(self.age)] = input("entrer le nouveau age : ")
+        self.etudiants[self.etudiants.index(self.nom)] = input("entrer le nouveeau nom : ")
+        self.etudiants[self.etudiants.index(self.prenom)] = input("entrer le nouveau prenom : ")
+        self.etudiants[self.etudiants.index(self.age)] = input("entrer le nouveau age : ")
         print("mise a jour avec success !!")
        
    
@@ -51,9 +51,10 @@ class etudiant(institution) :
             if self.etudiants[i] == self.nom and self.etudiants[i+1] == self.prenom and self.etudiants[i+2] == self.age :
                 print(f"{self.etudiants[i]}{self.etudiants[i+1]} est trouver avec succes ")
                 break
-            else  :
-                print(f"{self.etudiants[i]}{self.etudiants[i+1]} n'est pas trouver ")
+            elif (i==len(self.etudiants)) :
                 break
+
+        
     def affichage(self):
         for i in range(0, len(self.etudiants), 3):
             print(self.etudiants[i], self.etudiants[i+1], self.etudiants[i+2])
