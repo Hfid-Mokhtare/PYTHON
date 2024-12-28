@@ -4,6 +4,13 @@
 # [4] list Items Is not unique
 # [5] list can have different data types
 
+print('-----------------------------------------------------')
+list1=["ali","mohamed"]
+list2=["reda"]
+list3=list+list2
+print(list3)
+print('-----------------------------------------------------')
+
 My_List=["One","Two","tree",1,100.5,True]
 
 print("print all the list : ",My_List) # whole list
