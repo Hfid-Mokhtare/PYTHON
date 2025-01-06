@@ -31,7 +31,7 @@ for data_k, data_v in CartInfo.items():
 
         print(f"{info_k} : {info_v}")
 
-#------------------------------------------------
+# using class ------------------------------------------------
 
 person = {
     "name": "Alice",
