@@ -32,3 +32,29 @@ if (Maritalsta==MaritalStatus.married.value):
     print("you are married :) \n")
 else:
     print ("you are single :( \n")
+
+# whithout importing Enum librery ----------------------------------
+BLACK = 0
+WHITE = 1
+BLUE = 2
+GREEN = 3
+
+MARRIED = 1
+SINGLE = 0
+
+MALE = 1
+FEMALE = 0
+
+# Example usage:
+favorite_color = BLUE
+marital_status = MARRIED
+gender = MALE
+
+if favorite_color == BLUE:
+    print("User's favorite color is blue.")
+
+if marital_status == MARRIED:
+    print("User is married.")
+
+if gender==MALE:
+    print("User is Male")
