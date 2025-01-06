@@ -41,3 +41,18 @@ def PrintSumEvenNumbers(Num):
     print(SumEvenNum)
 
 PrintSumEvenNumbers(ReadNum())
+#---------------------------------------------
+
+
+def ReadNum():
+    Num=int(input("enter the number : "))
+    return Num
+def PrintSumFactorialNumbers(Num):
+    Factorial=1
+    for i in range(Num,0,-1):
+        Factorial*=i
+    print(Factorial)
+
+PrintSumFactorialNumbers(ReadNum())
+
+
