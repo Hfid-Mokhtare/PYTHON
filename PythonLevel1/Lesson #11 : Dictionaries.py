@@ -31,6 +31,7 @@ for data_k, data_v in CartInfo.items():
 
         print(f"{info_k} : {info_v}")
 
+#------------------------------------------------
 
 person = {
     "name": "Alice",
@@ -41,7 +42,6 @@ person = {
 print(person["name"])  # Output: Alice
 print(person["age"])   # Output: 30
 
-#------------------------------------------------
 
 # Define classes to represent the information structures
 
