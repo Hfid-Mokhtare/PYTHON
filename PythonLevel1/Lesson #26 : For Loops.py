@@ -55,4 +55,30 @@ def PrintSumFactorialNumbers(Num):
 
 PrintSumFactorialNumbers(ReadNum())
 
+#---------------------------------------------
+
+def ReadNum():
+    Num=int(input("enter the number : "))
+    Base=int(input("enter the base : "))
+    return Num, Base
+
+def PrintPowerOfNum(Num,Base):
+    Power=1
+    for i in range(1,Base+1):
+        Power*=Num
+    print(Power)
+Num,Base=ReadNum()
+PrintPowerOfNum(Num,Base)
+
+#---------------------------------------------
+
+def PrintLetters():
+    for i in range(65,90+1):
+        print(chr(i))
+
+
+PrintLetters()
+
+
+
 
