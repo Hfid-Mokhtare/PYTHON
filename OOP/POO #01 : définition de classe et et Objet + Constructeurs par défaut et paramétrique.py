@@ -1,11 +1,13 @@
 class student:
     def __init__(self): #constructeur par defaut d'initialisation
+        # Attribu du class
         self.nom=""
-        self.prenom=""
-        self.age=0
+        self.prenom="" 
+        self.age=0 
 
 class person:
     def __init__(self,n="reda",p="",a=0): #constructeur parametrique
+        # Attribu du class
         self.nom=n
         self.prenom=p
         self.age=a
