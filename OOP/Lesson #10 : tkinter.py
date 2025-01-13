@@ -124,3 +124,59 @@ app1.mainloop()
 app2.mainloop()
 app3.mainloop()
 app4.mainloop()
+
+#========================================================================================================================================
+
+import tkinter as tk
+from tkinter import messagebox
+
+def info():
+    messagebox.showinfo("Information", "C'est une boite d'information")
+
+def Avertissement():
+    messagebox.showwarning("Avertissement", "C'est une boite d'Avertissement")
+
+# boite d'error
+def error():
+    messagebox.showerror("Erreur","C'est une boite d'erreur")
+
+
+# boite de confirmatoin OK/Annuler
+def confirmer1():
+    reponse= messagebox.askokcancel("Confirmation","Souhaitez-vous continuer ?")
+    if reponse:
+        print("user a choise de continuer")
+    else: 
+        print("user a annule l'action")
+
+def confirmer2():
+    reponse= messagebox.askyesno("Confirmation","Etes-vous sur?")
+    if reponse:
+        print("user a repondu Oui")
+    else: 
+        print("user a repondu Non")
+
+window= tk.Tk()
+window.title("Boites de message Tkinter")
+
+btn_info= tk.Button(window, text="Afficher info", command=info)
+btn_info.grid(row=0, column=0,padx=10,pady=5)
+
+btn_info= tk.Button(window, text="Afficher Avertissement", command=Avertissement, bg="red", fg="white")
+btn_info.grid(row=0, column=1,padx=10, pady=5)
+
+btn_info= tk.Button(window, text="Afficher Erreur", command=error)
+btn_info.grid(row=1, column=0,padx=10,pady=5)
+
+btn_ok_annuler= tk.Button(window, text="Ok / Annuler",command=confirmer1)
+btn_ok_annuler.grid(pady=5)
+
+btn_ok_annuler= tk.Button(window, text="Oui / Non",command=confirmer2)
+btn_ok_annuler.grid(row=1, column=1,padx=10,pady=5)
+
+window.mainloop()
+
+
+#========================================================================================================================================
+
+import tkinter as tk
