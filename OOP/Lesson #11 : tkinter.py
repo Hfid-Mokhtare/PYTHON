@@ -41,8 +41,9 @@ entry_age.pack(pady=(0, 20))
 label = tk.Label(frame, text="Sexe:", font=("Arial", 15, "bold"))
 label.pack()
 var_sexe = tk.StringVar(value="Homme")
+
 radio1 = tk.Radiobutton(frame, text="Homme", value='Homme', variable=var_sexe, font=("Arial", 12))
-radio2 = tk.Radiobutton(frame, text="Femme", value='Femme', font=("Arial", 12))
+radio2 = tk.Radiobutton(frame, text="Femme", value='Femme', variable=var_sexe,font=("Arial", 12))
 radio1.pack()
 radio2.pack(pady=(0, 20))
 
