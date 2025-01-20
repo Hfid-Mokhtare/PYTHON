@@ -1,10 +1,13 @@
 class student:
     group ="dev 101" # C'est un atribut de class
-    __nbre_student=0
+    nbre_student=0
     def __init__(self,name="",age=""):
         self.name=name
         self.age=age
         student.nbre_student+=1 # auto incrament
+    def __del__(self):
+        student.nbre_student-=1 # auto decriment
+        
 
 
 S1=student("ali", 19)
