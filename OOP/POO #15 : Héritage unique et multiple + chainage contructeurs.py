@@ -1,24 +1,29 @@
-from copy import copy
-
-class EtreVivon:
-    def __init__(self,type):
-        self.type=type
+class person:
+    def __init__(self,fname, lname):
+        self.fname=fname
+        self.lname=lname
     def __str__(self):
-        return self.type
-class person(EtreVivon): 
-    def __init__(self,type, name,age):
-        EtreVivon.__init__(self,type)
-        self.name=name
-        self.age=age
-    def __str__(self):
-        print("this is a class of person")
+        return self.fname+" "+self.lname
 
-class student(person,EtreVivon):
-    def __init__(self,type, name, age, school):
-        EtreVivon.__init__(self,type)
-        person.__init__(self,name, age)
-        self.school=school
-    def __str__(self):
-        print ("this is a class of student qui h'irite de Etrevivon et person ")
 
-S1=student(input("enter the type : "), input("enter the name : "), input("enter the age : "), input("enter the school name : "))
+class etre_vivant:
+    def __init__(self,Taille, voix):
+        self.Taille=Taille
+        self.voix=voix
+    def print_t_v(self):
+        print(self.Taille, " ", self.voix)
+
+class student(person):
+    def __init__(self, fname, lname, note):
+        person.__init__(self, fname, lname)
+        self.note=note
+
+class professeur(person, etre_vivant):
+    def __init__(self, fn, ln, t, v, sal):
+        person.__init__(self,fn, ln)
+        etre_vivant.__init__(self,t, v)
+        self.salaire=sal
+
+P1=professeur("ali", "zeggaf","moyen","parler",1000)
+print(P1)
+P1.print_t_v()
